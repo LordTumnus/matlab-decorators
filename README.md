@@ -1,4 +1,5 @@
-# matlab-decorators
+# matlab-decorators [![View matlab-decorators on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/134771-matlab-decorators)
+
 Decorator attribute for Matlab classes
 
 When a class inherits from Decoratable, it can define decorators in the  "SetDecorator" and "GetDecorator" attribute for its properties; or the "Decorator" attribute for its methods. 
@@ -10,7 +11,7 @@ Decorators take a function (a getter, setter or method of the class) and return 
 - Many decorators can be used by using a cell array {}. In that case, decorators are called from left to right:
  `{@decorator1, @decorator2} == @decorator1(@decorator2(...))`
 
-## Example:
+### Example:
 ```MATLAB
 classdef DecoratableSubclass < Decoratable
     properties (Description = "SetDecorator = @decorator.count")
@@ -26,10 +27,12 @@ classdef DecoratableSubclass < Decoratable
     end
 end
 ```
-%
-% This class defines a set decorator for Property1 and Property2, a get 
-% decorator for Property3, and two method decorators for its method. 
-% To understand the behaviour of the decorated class properties and methods, see
-% the decorators defined  in the "/+decorator" package
-%
-%
+
+This class defines a set decorator for Property1 and Property2, a get decorator for Property3, and two method decorators for its method. To understand the behaviour of the decorated class properties and methods, see the decorators defined in the "[/+decorator](https://github.com/LordTumnus/matlab-decorators/tree/main/%2Bdecorator)" package
+
+## License
+MIT
+## Disclaimer 
+Don't use it for production :) This is something I did for fun and to see what can be achieved through Matlabs OOP metaprogramming features
+
+
